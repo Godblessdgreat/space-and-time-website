@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e0e0e" id="themeMeta" />
+  <meta name="description" content="Space & Time Design Concepts — a Lagos-based design and construction studio. Architectural Design, 3D Visualization, and Construction across Nigeria, Liberia, and beyond." />
+  <meta name="keywords" content="architecture Lagos, architectural design Nigeria, 3D visualization Lagos, construction Lagos, design firm Yaba, Space and Time Design Concepts, Johnson's Villa Omole, PETAN Port Harcourt, Eco Bank Lekki" />
+  <meta name="author" content="Space & Time Design Concepts" />
+  <link rel="canonical" href="https://spaceandtime.design/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Space & Time Design Concepts" />
+  <meta property="og:title" content="Space & Time — We imagine and create each space, per time." />
+  <meta property="og:description" content="A Lagos design and construction studio. Architectural Design · 3D Visualization · Construction." />
+  <meta property="og:url" content="https://spaceandtime.design/" />
+  <meta property="og:image" content="brand_assets/logo_horizontal_dark.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Space & Time — We imagine and create each space, per time." />
+  <meta name="twitter:description" content="Architectural Design · 3D Visualization · Construction. Lagos, Nigeria." />
+  <meta name="twitter:image" content="brand_assets/logo_horizontal_dark.png" />
+
+  <title>Space &amp; Time Design Concepts — We imagine and create each space, per time.</title>
+
+  <link rel="icon" type="image/png" href="brand_assets/logo_horizontal_dark.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('st-theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        var theme = saved || (prefersLight ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Space & Time Design Concepts",
+    "alternateName": "Space & Time",
+    "description": "A Lagos-based construction and conceptual design firm. We imagine and create each space, per time. Architectural Design, 3D Visualization, and Construction across Nigeria, Liberia, and West Africa.",
+    "url": "https://spaceandtime.design/",
+    "logo": "brand_assets/logo_horizontal_dark.png",
+    "image": "brand_assets/logo_horizontal_dark.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "16 Akanbi Crescent, off Lawani Road, Abule-oja, Akoka",
+      "addressLocality": "Yaba, Lagos",
+      "addressCountry": "NG"
+    },
+    "telephone": ["+234-809-815-0007", "+234-708-382-5953"],
+    "email": "space8timed.c@gmail.com",
+    "areaServed": ["Lagos", "Kaduna", "Port Harcourt", "Liberia", "Nigeria", "West Africa"],
+    "serviceType": ["Architectural Design", "3D Visualization", "Construction", "Interior Design", "Project Management"],
+    "slogan": "We imagine and create each space, per time."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__bracket loader__bracket--tl"></div>
+      <div class="loader__bracket loader__bracket--br"></div>
+      <span class="loader__text">SPACE &amp; TIME</span>
+      <span class="loader__sub">Design Concepts</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Space and Time — Home">
+        <img class="logo logo--dark" src="brand_assets/logo_horizontal_dark.png" alt="Space &amp; Time Design Concepts" />
+        <img class="logo logo--light" src="brand_assets/logo_horizontal_light.png" alt="Space &amp; Time Design Concepts" />
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#work">Work</a>
+        <a href="#team">Studio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" type="button">
+        <span class="theme-toggle__track" aria-hidden="true">
+          <span class="theme-toggle__thumb">
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </span>
+        </span>
+      </button>
+
+      <a href="#contact" class="btn btn--ghost nav__cta">Start a Project</a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+      <a href="#team">Studio</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn--primary">Start a Project</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__img" data-parallax="0.15"></div>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__eyebrow reveal">
+          <span class="hero__live-dot" aria-hidden="true"></span>
+          <span>Studio · Lagos · Now booking 2026</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__line reveal-line">Spaces designed</span>
+          <span class="hero__line reveal-line">for the <em class="serif italic">time within.</em></span>
+        </h1>
+
+        <p class="hero__lede reveal">
+          A Lagos design and construction studio. Architecture, 3D visualization,
+          and build — delivered under <em class="serif italic">one signature.</em>
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#work" class="btn btn--primary">View Selected Work <span class="btn-arr">→</span></a>
+          <a href="https://calendly.com/space-and-time/discovery" target="_blank" rel="noopener" class="btn btn--ghost">Book a Discovery Call</a>
+        </div>
+
+        <div class="hero__meta-row reveal">
+          <span><i></i>06°31′N · 03°22′E</span>
+          <span>Design × Visualize × Build</span>
+          <span>Lagos · Liberia · West Africa</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom credibility strip -->
+    <div class="hero__bottom">
+      <div class="container hero__bottom-row">
+        <div class="hero__bottom-item reveal">
+          <span class="hero__bottom-num"><span data-count="13">0</span>+</span>
+          <span class="hero__bottom-label">Spaces designed · Lagos to Liberia</span>
+        </div>
+        <div class="hero__bottom-item reveal">
+          <span class="hero__bottom-num"><span data-count="2">0</span></span>
+          <span class="hero__bottom-label">Countries · One studio signature</span>
+        </div>
+        <div class="hero__bottom-item hero__bottom-item--quote reveal">
+          <span class="serif italic">&ldquo;Imagination is the tool. Every space is the proof.&rdquo;</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Scroll to about">
+      <span></span>Scroll
+    </a>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Architectural Design</span><span class="dot">◆</span>
+      <span>3D Visualization</span><span class="dot">◆</span>
+      <span>Construction</span><span class="dot">◆</span>
+      <span>We imagine and create each space, per time.</span><span class="dot">◆</span>
+      <span>Architectural Design</span><span class="dot">◆</span>
+      <span>3D Visualization</span><span class="dot">◆</span>
+      <span>Construction</span><span class="dot">◆</span>
+      <span>We imagine and create each space, per time.</span><span class="dot">◆</span>
+    </div>
+  </section>
+
+  <!-- TRUST / CLIENTS -->
+  <section class="trust">
+    <div class="container">
+      <p class="trust__label reveal">Selected clients &amp; engagements</p>
+      <div class="trust__row reveal">
+        <img class="trust__logo" src="https://logo.clearbit.com/ecobank.com" alt="Eco Bank" loading="lazy" />
+        <img class="trust__logo" src="https://logo.clearbit.com/petan.org" alt="PETAN — Petroleum Technology Association of Nigeria" loading="lazy" />
+        <span class="trust__mark" title="Private Estate · Liberia"><span>PE</span><em>Liberia</em></span>
+        <span class="trust__mark" title="Green Spring Estate"><span>GS</span><em>Green Spring</em></span>
+        <span class="trust__mark" title="Olarewaju Estate · Ikorodu"><span>OE</span><em>Olarewaju</em></span>
+        <span class="trust__mark" title="Hughes Avenue · Yaba"><span>HA</span><em>Hughes Ave</em></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__media reveal-img">
+        <div class="about__img" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80&auto=format&fit=crop')"></div>
+        <div class="about__badge">
+          <span class="serif italic">Studio</span>
+          <strong>16 Akanbi Cres, Yaba</strong>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <span class="section-label reveal">01 — About the Studio</span>
+        <h2 class="h2 reveal">
+          We are <span class="serif italic">Space &amp; Time.</span>
+        </h2>
+        <p class="reveal">
+          Space &amp; Time Design Concepts is a construction and conceptual
+          design firm based in Lagos, Nigeria. We are an enthusiastic team of
+          creative, intelligent, and inspired young professionals who believe
+          in a balanced utilitarian approach to spaces — artfully conceptualized
+          and crafted to a formidable standard of spatial arrangement.
+        </p>
+        <p class="reveal">
+          Every space we touch carries our signature — precision, creativity,
+          and a deep respect for how people experience the built environment.
+          From residential developments to commercial office complexes, from
+          Lagos to Kaduna, Port Harcourt, and Liberia, our portfolio
+          demonstrates that great design transcends geography.
+        </p>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <span class="stat__num" data-count="13">0</span><span class="stat__plus">+</span>
+            <span class="stat__label">Featured Projects</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__num" data-count="4">0</span>
+            <span class="stat__label">Cities Served</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__num" data-count="7">0</span>
+            <span class="stat__label">Disciplines, One Roof</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION / MISSION / GOAL -->
+  <section class="vmg section" id="vmg">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label reveal">02 — Vision · Mission · Goal</span>
+        <h2 class="h2 reveal">
+          Why we get up <span class="serif italic">every morning.</span>
+        </h2>
+      </div>
+
+      <div class="vmg-grid">
+        <article class="vmg-card vmg-card--orange reveal">
+          <span class="vmg-card__letter">V</span>
+          <h3>Vision</h3>
+          <p>To be among the best providers of affordable housing solutions using alternative and contemporary systems of construction in all major cities across Africa.</p>
+        </article>
+        <article class="vmg-card vmg-card--gold reveal">
+          <span class="vmg-card__letter">M</span>
+          <h3>Mission</h3>
+          <p>We imagine and create the link between the conventional system and alternative design methodology — for an effective and simple construction model, during and after every design process.</p>
+        </article>
+        <article class="vmg-card vmg-card--terracotta reveal">
+          <span class="vmg-card__letter">G</span>
+          <h3>Goal</h3>
+          <p>To help reduce the housing deficit in Nigeria and sub-Saharan Africa through new building solutions — making housing readily available, and uniquely affordable.</p>
+        </article>
+      </div>
+
+      <div class="vmg-tagline reveal">
+        <span class="vmg-tagline__rule"></span>
+        <p>We imagine and create each space, <em class="serif italic">per time.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy section" id="philosophy">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="section-label reveal">03 — Philosophy</span>
+          <h2 class="h2 reveal">
+            Four convictions, <span class="serif italic">one signature.</span>
+          </h2>
+        </div>
+        <p class="section-head__copy reveal">
+          We design and construct to stimulate, thrill, and excite —
+          but we make paramount the design functionality and construction
+          principles that form the basic guidelines of every project we touch.
+        </p>
+      </div>
+
+      <div class="phil-grid">
+        <article class="phil-card phil-card--orange reveal">
+          <span class="phil-card__letter">C</span>
+          <h3>Creativity</h3>
+          <p>Fresh eyes and original thinking — every space tells its own story.</p>
+        </article>
+        <article class="phil-card phil-card--gold reveal">
+          <span class="phil-card__letter">S</span>
+          <h3>Style</h3>
+          <p>An aesthetic sensibility that's refined, contemporary, and never loud for its own sake.</p>
+        </article>
+        <article class="phil-card phil-card--orange-deep reveal">
+          <span class="phil-card__letter">P</span>
+          <h3>Precision</h3>
+          <p>From first sketch to final finish — exacting standards, end to end.</p>
+        </article>
+        <article class="phil-card phil-card--terracotta reveal">
+          <span class="phil-card__letter">Si</span>
+          <h3>Simplicity</h3>
+          <p>The best design is effortless — complex problems resolved into clean, liveable solutions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="section-label reveal">04 — Scope of Services</span>
+          <h2 class="h2 reveal">
+            One studio. Three pillars.<br />
+            <span class="serif italic">Every discipline you'll need.</span>
+          </h2>
+        </div>
+        <p class="section-head__copy reveal">
+          We run our services to international best practices — in conformity
+          with ISO standards and Nigerian regulations of the built environment.
+          Engage one pillar, or all three.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service reveal">
+          <div class="service__num">/01</div>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 50V15L30 5L55 15V50" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 50V30H40V50" stroke="currentColor" stroke-width="2"/>
+              <path d="M5 50H55" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service__title">Architectural Design</h3>
+          <p class="service__copy">
+            From concept to construction documents. We shape buildings that
+            reconcile aspiration with site, brief, and budget — and never
+            lose the soul of the space.
+          </p>
+          <ul class="service__list">
+            <li>Architectural Design</li>
+            <li>Interior Design</li>
+            <li>Design Consultancy</li>
+            <li>Site Supervision</li>
+            <li>Project Management</li>
+          </ul>
+          <a href="#contact" class="service__link">Discuss a Design <span class="btn-arr">→</span></a>
+        </article>
+
+        <article class="service service--accent reveal">
+          <div class="service__num">/02</div>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 20L30 5L55 20V45L30 55L5 45V20Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M5 20L30 32M30 32L55 20M30 32V55" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service__title">3D Visualization</h3>
+          <p class="service__copy">
+            Photoreal renderings, walkthroughs, and immersive imagery that
+            let clients and boards <em class="serif italic">experience</em>
+            the project before construction begins.
+          </p>
+          <ul class="service__list">
+            <li>Exterior &amp; Interior Renders</li>
+            <li>Animation &amp; Walkthroughs</li>
+            <li>VR-Ready Environments</li>
+            <li>Marketing &amp; Sales Imagery</li>
+          </ul>
+          <a href="#contact" class="service__link">See It First <span class="btn-arr">→</span></a>
+        </article>
+
+        <article class="service reveal">
+          <div class="service__num">/03</div>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 50V20H50V50" stroke="currentColor" stroke-width="2"/>
+              <path d="M5 20L30 5L55 20" stroke="currentColor" stroke-width="2"/>
+              <path d="M25 50V35H35V50" stroke="currentColor" stroke-width="2"/>
+              <path d="M15 30H22M38 30H45" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service__title">Construction</h3>
+          <p class="service__copy">
+            We bring vision into reality — managing build, budget, and quality
+            with the same precision that defined the drawing board.
+          </p>
+          <ul class="service__list">
+            <li>New Build Construction</li>
+            <li>Renovation &amp; Remodeling</li>
+            <li>Restoration of Buildings</li>
+            <li>Fit-Out &amp; Finishing</li>
+            <li>Project Delivery Management</li>
+          </ul>
+          <a href="#contact" class="service__link">Begin Building <span class="btn-arr">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label reveal">05 — Process</span>
+        <h2 class="h2 reveal">
+          From <span class="serif italic">first sketch</span> to <span class="serif italic">final key.</span>
+        </h2>
+        <p class="section-head__copy reveal" style="max-width: 580px;">
+          A disciplined four-stage process. Same studio, same hands,
+          same signature — start to finish.
+        </p>
+      </div>
+
+      <div class="process__track">
+        <div class="process__line" aria-hidden="true"><div class="process__line-fill" id="processLine"></div></div>
+        <div class="process__step reveal">
+          <span class="process__num">01</span>
+          <h3>Discover</h3>
+          <p>We listen — to your brief, your site, your people. Constraints become the brief; ambition becomes the compass.</p>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__num">02</span>
+          <h3>Design</h3>
+          <p>Concepts, plans, and material studies. We iterate quickly and resolve thoroughly until the design is undeniable.</p>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__num">03</span>
+          <h3>Visualize</h3>
+          <p>Photoreal 3D renderings let you experience the building before it exists — and refine with confidence.</p>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__num">04</span>
+          <h3>Build</h3>
+          <p>We execute on site with the same precision we draw — managing trades, materials, and milestones to handover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / FEATURED -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="section-label reveal">06 — Selected Work</span>
+          <h2 class="h2 reveal">
+            Where great design <span class="serif italic">transcends geography.</span>
+          </h2>
+        </div>
+        <p class="section-head__copy reveal">
+          A small selection of recent and in-progress work — from residential
+          villas in Omole and Lekki, to commercial complexes in Yaba and
+          Port Harcourt, to private homes in Liberia.
+        </p>
+      </div>
+
+      <div class="work-grid">
+        <article class="project project--lg reveal-img">
+          <div class="project__media">
+            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&q=80&auto=format&fit=crop')"></div>
+          </div>
+          <div class="project__meta">
+            <span class="project__cat">Residential · In build</span>
+            <h3 class="project__title">Johnson's Villa</h3>
+            <span class="project__loc">Omole Phase 1, Lagos</span>
+          </div>
+          <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
+        </article>
+
+        <article class="project reveal-img">
+          <div class="project__media">
+            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80&auto=format&fit=crop')"></div>
+          </div>
+          <div class="project__meta">
+            <span class="project__cat">Commercial · Delivered</span>
+            <h3 class="project__title">Eco Bank Remodelling</h3>
+            <span class="project__loc">Benz Centre, Lekki, Lagos</span>
+          </div>
+          <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
+        </article>
+
+        <article class="project reveal-img">
+          <div class="project__media">
+            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80&auto=format&fit=crop')"></div>
+          </div>
+          <div class="project__meta">
+            <span class="project__cat">Office · Proposed</span>
+            <h3 class="project__title">PETAN Office Complex</h3>
+            <span class="project__loc">Port Harcourt, Nigeria</span>
+          </div>
+          <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
+        </article>
+
+        <article class="project project--lg reveal-img">
+          <div class="project__media">
+            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80&auto=format&fit=crop')"></div>
+          </div>
+          <div class="project__meta">
+            <span class="project__cat">Residential · International</span>
+            <h3 class="project__title">Private Residence, Liberia</h3>
+            <span class="project__loc">Monrovia, Liberia</span>
+          </div>
+          <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
+        </article>
+      </div>
+
+      <div class="work__cta reveal">
+        <a href="#contact" class="btn btn--ghost">Request the Full Portfolio <span class="btn-arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <section class="stats-band">
+    <div class="container">
+      <div class="stats-band__grid">
+        <div class="stats-band__item reveal">
+          <span class="stats-band__num" data-count="13">0</span><span>+</span>
+          <span class="stats-band__label">Featured Projects</span>
+        </div>
+        <div class="stats-band__item reveal">
+          <span class="stats-band__num" data-count="4">0</span>
+          <span class="stats-band__label">Cities Served</span>
+        </div>
+        <div class="stats-band__item reveal">
+          <span class="stats-band__num" data-count="7">0</span>
+          <span class="stats-band__label">Disciplines · One Roof</span>
+        </div>
+        <div class="stats-band__item reveal">
+          <span class="stats-band__num" data-count="2">0</span>
+          <span class="stats-band__label">Day Response Time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORDS / PHILOSOPHY QUOTES -->
+  <section class="words section" id="words">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label reveal">07 — Words</span>
+        <h2 class="h2 reveal">
+          What we live <span class="serif italic">by.</span>
+        </h2>
+      </div>
+
+      <div class="words-grid">
+        <figure class="word-card reveal">
+          <span class="word-card__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>Some people look for a beautiful place — others <em class="serif italic">make</em> a place beautiful.</blockquote>
+          <figcaption>Hazrat Inayat Khan</figcaption>
+        </figure>
+        <figure class="word-card word-card--accent reveal">
+          <span class="word-card__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>Good design is obvious. <em class="serif italic">Great</em> design is transparent.</blockquote>
+          <figcaption>Joe Sparano</figcaption>
+        </figure>
+        <figure class="word-card reveal">
+          <span class="word-card__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>Using the gift of <em class="serif italic">imagination</em> as a creative tool.</blockquote>
+          <figcaption>The Space &amp; Time Studio</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- REACH -->
+  <section class="reach section" id="reach">
+    <div class="container reach__inner">
+      <span class="section-label reveal">08 — Our Reach</span>
+      <h2 class="h2 reveal">
+        From Lagos <span class="serif italic">outward.</span>
+      </h2>
+      <p class="reach__copy reveal">
+        Great design transcends geography. We carry the same studio
+        signature from Lagos to Kaduna, Port Harcourt, and across the
+        border to Liberia — and we travel for briefs that deserve us.
+      </p>
+
+      <ul class="reach__list reveal">
+        <li><span>NG</span>Lagos</li>
+        <li><span>NG</span>Kaduna</li>
+        <li><span>NG</span>Port Harcourt</li>
+        <li><span>LR</span>Monrovia</li>
+        <li class="reach__plus">+ Beyond</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="section-label reveal">09 — The Studio</span>
+          <h2 class="h2 reveal">
+            Young. Talented. <span class="serif italic">Inspired.</span>
+          </h2>
+        </div>
+        <p class="section-head__copy reveal">
+          A small, deliberate team — architects, engineers, visualizers,
+          and builders working under one roof, on every project, from
+          first sketch to final key.
+        </p>
+      </div>
+
+      <div class="roles-grid">
+        <div class="role reveal">
+          <span class="role__num">01</span>
+          <h3>Architects</h3>
+          <p>Design-led thinkers who transform briefs into blueprints.</p>
+        </div>
+        <div class="role reveal">
+          <span class="role__num">02</span>
+          <h3>Engineers</h3>
+          <p>Technical precision ensuring every structure stands firm.</p>
+        </div>
+        <div class="role reveal">
+          <span class="role__num">03</span>
+          <h3>3D Visualizers</h3>
+          <p>Bringing designs to life before a single brick is laid.</p>
+        </div>
+        <div class="role reveal">
+          <span class="role__num">04</span>
+          <h3>Interior Designers</h3>
+          <p>Crafting interior environments that inspire and endure.</p>
+        </div>
+        <div class="role reveal">
+          <span class="role__num">05</span>
+          <h3>Builders</h3>
+          <p>Skilled craftspeople delivering quality on site, every day.</p>
+        </div>
+        <div class="role reveal">
+          <span class="role__num">06</span>
+          <h3>Artisans</h3>
+          <p>The finishing touch — detail, craft, and pride in work.</p>
+        </div>
+        <div class="role reveal">
+          <span class="role__num">07</span>
+          <h3>Support Staff</h3>
+          <p>Keeping every project running smoothly from first brief to handover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <span class="section-label reveal">10 — Questions</span>
+          <h2 class="h2 reveal">
+            Frequently <span class="serif italic">asked.</span>
+          </h2>
+        </div>
+        <p class="section-head__copy reveal">
+          Everything worth knowing before you reach out. If yours isn't
+          here, <a href="#contact" style="color:var(--orange);">send us a brief</a>.
+        </p>
+      </div>
+
+      <div class="faq__list">
+        <details class="faq__item reveal">
+          <summary>
+            <span>What types of projects do you take on?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <p>Residential homes and developments, commercial offices, banking and corporate fit-outs, hospitality, and selective public-realm projects. If it shapes how people experience space, we're interested. Recent work spans Eco Bank, PETAN, private villas in Omole and Lekki, and residential development in Liberia.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>
+            <span>Can I commission only renderings — or only construction?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <p>Yes. Our three pillars work end-to-end together but are also offered standalone. Bring us a finished design to render, or a finished design to build — we'll meet you where you are.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>
+            <span>How long does a typical project take?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <p>Design alone runs 8–16 weeks. Visualization, 2–6 weeks. Construction varies with scope, site, and approvals. After our discovery call we send a phased programme with realistic dates — and stick to it.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>
+            <span>Do you work outside Nigeria?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <p>Yes. We've delivered residential work in Liberia and welcome briefs from across West Africa and beyond. Geography is logistics — design is design.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>
+            <span>How do you price your work?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <p>Architectural fees: a percentage of construction value, or a fixed fee for defined scopes. Visualization: per image or per package. Construction: by detailed bill of quantities. Always transparent, always documented.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>
+            <span>How do we get started?</span>
+            <span class="faq__plus" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <p>Send a brief through the form below, or email <a href="mailto:space8timed.c@gmail.com" style="color:var(--orange);">space8timed.c@gmail.com</a>. We respond within two working days with a discovery-call invitation.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg" data-parallax="0.2" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80&auto=format&fit=crop')"></div>
+    <div class="cta-banner__overlay"></div>
+    <div class="container cta-banner__inner">
+      <p class="eyebrow reveal" style="color: rgba(255,255,255,0.7);">Have a vision?</p>
+      <h2 class="cta-banner__title reveal">
+        Let's build it <span class="serif italic">together.</span>
+      </h2>
+      <p class="cta-banner__copy reveal">
+        Two-day reply. Thirty-minute discovery call. A space worth the wait.
+      </p>
+      <div class="reveal">
+        <a href="#contact" class="btn btn--primary btn--lg">Send Your Brief <span class="btn-arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__lead">
+        <span class="section-label reveal">11 — Begin</span>
+        <h2 class="h2 reveal">
+          Have a space in mind?<br />
+          <span class="serif italic">Let's build it.</span>
+        </h2>
+        <p class="reveal">
+          Tell us about your project — site, scope, ambition, deadline.
+          We respond within two working days, every time.
+        </p>
+
+        <ul class="contact__info reveal">
+          <li><span>Studio</span>16 Akanbi Crescent, off Lawani Rd,<br />Abule-oja, Akoka, Yaba, Lagos</li>
+          <li><span>Email</span><a href="mailto:space8timed.c@gmail.com">space8timed.c@gmail.com</a></li>
+          <li><span>Phone</span><a href="tel:+2348098150007">+234 809 815 0007</a> · <a href="tel:+2347083825953">(0)708 382 5953</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/2348098150007" target="_blank" rel="noopener">+234 809 815 0007</a></li>
+          <li><span>Hours</span>Mon — Fri · 9:00 — 18:00 WAT</li>
+        </ul>
+
+        <div class="contact__map reveal" aria-label="Studio location map">
+          <iframe
+            src="https://maps.google.com/maps?q=16+Akanbi+Crescent+Yaba+Lagos&z=16&output=embed"
+            width="100%" height="100%" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Space &amp; Time studio location — 16 Akanbi Crescent, Yaba, Lagos"
+            style="border:0;"></iframe>
+        </div>
+      </div>
+
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone <small style="color:var(--muted); text-transform:none; letter-spacing:0;">(optional)</small></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="service">Engagement</label>
+          <select id="service" name="service">
+            <option>Architectural Design</option>
+            <option>3D Visualization</option>
+            <option>Construction</option>
+            <option>Full Project (Design → Build)</option>
+            <option>Consultancy / Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Project Brief</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Site, scope, budget range, target completion…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Send Brief <span class="btn-arr">→</span></button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <div class="newsletter__copy reveal">
+        <span class="section-label" style="color: var(--white); margin-bottom: 12px;">Stay in touch</span>
+        <h2 class="newsletter__title">
+          Notes from the studio,<br />
+          <span class="serif italic">in your inbox.</span>
+        </h2>
+        <p>Quarterly. Considered. Never spam.</p>
+      </div>
+      <form class="newsletter__form reveal" id="newsletterForm" novalidate>
+        <input type="email" id="newsletterEmail" name="email" placeholder="your@email.com" required autocomplete="email" aria-label="Email address" />
+        <button type="submit" class="btn btn--primary">Subscribe <span class="btn-arr">→</span></button>
+        <p class="newsletter__status" id="newsletterStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img class="logo logo--dark" src="brand_assets/logo_horizontal_dark.png" alt="Space &amp; Time Design Concepts" />
+        <img class="logo logo--light" src="brand_assets/logo_horizontal_light.png" alt="Space &amp; Time Design Concepts" />
+        <p>A Lagos design and construction studio.<br />Architecture × 3D Visualization × Build.<br />16 Akanbi Crescent, Yaba, Lagos.</p>
+        <p class="footer__tagline serif italic">"Imagination is the tool. Every space is the proof."</p>
+      </div>
+
+      <div class="footer__cols">
+        <div>
+          <h4>Studio</h4>
+          <a href="#about">About</a>
+          <a href="#vmg">Vision &amp; Mission</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#team">Team</a>
+        </div>
+        <div>
+          <h4>Practice</h4>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#work">Work</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="mailto:space8timed.c@gmail.com">Email</a>
+          <a href="tel:+2348098150007">+234 809 815 0007</a>
+          <a href="https://wa.me/2348098150007" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/spaceandtime.design" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://linkedin.com/company/space-and-time-design" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Space &amp; Time Design Concepts. All rights reserved.</span>
+      <span class="serif italic">We elevate spaces to suit the time within.</span>
+    </div>
+  </footer>
+
+  <a class="fab-whatsapp" href="https://wa.me/2348098150007" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 2 7.6 2h.1c8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4Zm0 28.4h-.1c-2.4 0-4.7-.7-6.8-1.9l-.5-.3-4.7 1.2 1.2-4.6-.3-.5C3.5 20.6 2.7 18.3 2.7 16 2.7 8.7 8.7 2.7 16 2.7c3.6 0 6.9 1.4 9.4 3.9 2.5 2.5 3.9 5.9 3.9 9.4 0 7.3-6 13.3-13.3 13.3Zm7.3-9.9c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.3 0 1.9 1.4 3.8 1.6 4 .2.3 2.8 4.2 6.7 5.9.9.4 1.7.6 2.2.8.9.3 1.8.2 2.4.1.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5Z"/></svg>
+  </a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
