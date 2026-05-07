@@ -1670,7 +1670,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .footer__cols {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-sm);
 }
 .footer__cols h4 {
@@ -1700,6 +1700,9 @@ ul { list-style: none; padding: 0; margin: 0; }
   color: rgba(232,224,212,0.7);
   letter-spacing: 0.06em;
 }
+
+/* Newsletter section temporarily hidden — remove this rule to bring it back */
+.newsletter { display: none; }
 
 /* ============================================================
    BACK TO TOP

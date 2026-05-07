@@ -196,7 +196,7 @@
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const data = new FormData(form);
       const name = (data.get('name') || '').toString().trim();
@@ -217,10 +217,25 @@
       status.style.color = 'var(--orange)';
       status.textContent = 'Sending…';
 
-      setTimeout(() => {
-        status.textContent = `Thanks, ${name.split(' ')[0]}. We'll be in touch within two working days.`;
-        form.reset();
-      }, 700);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(Object.fromEntries(data))
+        });
+        const json = await res.json();
+        if (json.success) {
+          status.style.color = 'var(--orange)';
+          status.textContent = `Thanks, ${name.split(' ')[0]}. We'll be in touch within two working days.`;
+          form.reset();
+        } else {
+          status.style.color = 'var(--terracotta)';
+          status.textContent = json.message || 'Something went wrong. Please email us at space8timed.c@gmail.com.';
+        }
+      } catch (err) {
+        status.style.color = 'var(--terracotta)';
+        status.textContent = 'Network error. Please email us at space8timed.c@gmail.com.';
+      }
     });
   }
 
@@ -229,7 +244,7 @@
   const nlStatus = document.getElementById('newsletterStatus');
   const nlInput = document.getElementById('newsletterEmail');
   if (nlForm) {
-    nlForm.addEventListener('submit', (e) => {
+    nlForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = (nlInput && nlInput.value || '').trim();
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
@@ -237,10 +252,22 @@
         return;
       }
       nlStatus.textContent = 'Subscribing…';
-      setTimeout(() => {
-        nlStatus.textContent = 'You’re in. Welcome to the studio.';
-        nlForm.reset();
-      }, 600);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(nlForm)))
+        });
+        const json = await res.json();
+        if (json.success) {
+          nlStatus.textContent = "You're in. Welcome to the studio.";
+          nlForm.reset();
+        } else {
+          nlStatus.textContent = json.message || 'Something went wrong — please try again.';
+        }
+      } catch (err) {
+        nlStatus.textContent = 'Network error — please try again.';
+      }
     });
   }
 })();
