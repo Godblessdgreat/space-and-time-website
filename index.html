@@ -114,17 +114,19 @@
         <span></span><span></span><span></span>
       </button>
     </div>
-
-    <div class="nav__mobile" id="navMobile">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#team">Studio</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="btn btn--primary"><span>Start a Project</span></a>
-    </div>
   </header>
+
+  <!-- Mobile menu — sibling of <header> so backdrop-filter on .nav
+       doesn't trap position:fixed inside the nav's containing block -->
+  <div class="nav__mobile" id="navMobile">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#work">Work</a>
+    <a href="#team">Studio</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn--primary"><span>Start a Project</span></a>
+  </div>
 
   <!-- HERO -->
   <section class="hero" id="top">
