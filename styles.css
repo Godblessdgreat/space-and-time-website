@@ -321,29 +321,47 @@ ul { list-style: none; padding: 0; margin: 0; }
 .nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 .nav__mobile {
-  display: none;
+  display: flex;
   position: fixed;
-  inset: 78px 0 0 0;
-  background: var(--charcoal);
+  inset: 0;
+  background: rgba(14,14,14,0.98);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   flex-direction: column;
   align-items: stretch;
-  padding: 32px var(--gutter);
-  gap: 16px;
-  transform: translateY(-100%);
-  transition: transform var(--t-med);
-  z-index: 90;
+  justify-content: center;
+  padding: 100px var(--gutter) 40px;
+  gap: 4px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 95;
+  overflow-y: auto;
+  transition: opacity var(--t-med), visibility var(--t-med);
 }
 .nav__mobile.is-open {
-  display: flex;
-  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 .nav__mobile a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(232,224,212,0.07);
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(232,224,212,0.08);
+  letter-spacing: 0.01em;
+  text-align: center;
 }
-.nav__mobile .btn { margin-top: 16px; }
+.nav__mobile a:hover { color: var(--orange); }
+.nav__mobile .btn {
+  margin-top: 24px;
+  align-self: center;
+  padding: 16px 32px;
+  font-size: 0.85rem;
+  width: 100%;
+  max-width: 320px;
+  justify-content: center;
+}
 
 /* ============================================================
    HERO — editorial / awwwards-tier
@@ -1831,9 +1849,16 @@ ul { list-style: none; padding: 0; margin: 0; }
 @media (max-width: 768px) {
   .section { padding: var(--space-lg) 0; }
 
-  .hero__inner { padding: var(--space-lg) var(--gutter) var(--space-md); }
-  .hero__title { font-size: clamp(2.2rem, 9vw, 3.6rem); letter-spacing: -0.03em; }
-  .hero__lede { font-size: 1rem; }
+  /* Hero: clear the fixed nav (~78px) and stop centering content into it */
+  .hero { min-height: auto; }
+  .hero__inner {
+    padding: 110px var(--gutter) 40px;
+    justify-content: flex-start;
+    gap: 18px;
+    min-height: calc(100svh - 80px);
+  }
+  .hero__title { font-size: clamp(2.2rem, 9vw, 3.4rem); letter-spacing: -0.03em; max-width: 100%; }
+  .hero__lede { font-size: 1rem; max-width: 100%; }
   .hero__meta-row { gap: 8px 18px; font-size: 0.62rem; letter-spacing: 0.18em; }
   .hero__eyebrow { font-size: 0.62rem; padding: 7px 14px; }
 
@@ -1841,29 +1866,102 @@ ul { list-style: none; padding: 0; margin: 0; }
   .hero__cta .btn { width: 100%; justify-content: center; }
 
   .hero__bottom { padding: 18px 0; }
+  .hero__bottom-row { gap: 12px clamp(14px, 3vw, 28px); }
   .hero__bottom-num { font-size: clamp(1.6rem, 7vw, 2.2rem); }
   .hero__bottom-label { font-size: 0.66rem; letter-spacing: 0.14em; }
+  .hero__scroll { display: none; } /* gives the bottom strip room on phones */
 
   .trust { padding: 36px 0; }
   .trust__row { gap: 12px 24px; }
   .trust__name + .trust__name { border-left: none; padding-left: 0; }
+  .trust__name { white-space: normal; }
 
   .marquee { padding: 16px 0; font-size: 0.78rem; }
+  .marquee__track { gap: 22px; }
+
+  /* Decorative hero brackets get smaller / hidden on phones */
+  .hero__bracket { width: 56px; height: 56px; }
+  .hero__diagline { display: none; }
+
+  /* Section heads tighter */
+  .h2 { font-size: clamp(2rem, 7vw, 3rem); }
+  .section-label { font-size: 0.7rem; }
+
+  /* CTA banner — denser */
+  .cta-banner__title { font-size: clamp(1.8rem, 7vw, 2.6rem); line-height: 1.1; }
+
+  /* Floating widgets — smaller, no overlap */
+  .fab-whatsapp { width: 48px; height: 48px; bottom: 16px; left: 16px; }
+  .back-to-top { width: 44px; height: 44px; bottom: 16px; right: 16px; }
 }
 
 @media (max-width: 560px) {
-  .work-grid { grid-template-columns: 1fr; }
-  .process__track { grid-template-columns: 1fr; }
+  .work-grid { grid-template-columns: 1fr; gap: 14px; }
+  .process__track { grid-template-columns: 1fr; gap: 24px; }
   .reach__list { gap: 8px; }
   .reach__list li { padding: 10px 16px; font-size: 0.85rem; }
   .quote__mark { font-size: 5rem; }
   .stats-band__grid { grid-template-columns: 1fr; }
   .stats-band__item { border-left: none; border-top: 1px solid rgba(255,255,255,0.25); padding: 16px 0 0; }
-  .back-to-top { bottom: 20px; right: 20px; width: 42px; height: 42px; }
 
-  .hero__bottom-row { gap: 14px; }
-  .hero__cta .btn { padding: 14px 20px; font-size: 0.8rem; }
-  .nav__brand img { height: 28px; }
+  .hero__bottom-row { grid-template-columns: 1fr; gap: 14px; }
+  .hero__bottom-item--quote { grid-column: span 1; text-align: left; border-left: none; padding-left: 0; }
+  .hero__cta .btn { padding: 14px 20px; font-size: 0.78rem; }
+  .nav__brand img, .nav__logo img { height: 28px; }
+  .nav { padding: 14px 0; }
+
+  /* Roles last-child span: reset for single-col layout */
+  .roles-grid .role:last-child { grid-column: span 1; }
+
+  /* Footer columns: stack to single col on tiny screens for readability */
+  .footer__cols { grid-template-columns: 1fr; gap: 28px; }
+  .footer__bottom { font-size: 0.75rem; }
+
+  /* Forms — tighter spacing, full-width inputs */
+  .field input, .field select, .field textarea { font-size: 16px; } /* 16px prevents iOS auto-zoom */
+  .newsletter__form { flex-direction: column; gap: 10px; }
+  .newsletter__form input { width: 100%; }
+  .newsletter__form .btn { width: 100%; }
+
+  /* Contact map shorter on phones */
+  .contact__map { aspect-ratio: 4 / 3; min-height: 220px; }
+
+  /* Testimonial padding tighter */
+  .testimonial { padding: 24px; }
+  .testimonial__quote { font-size: 1rem; }
+
+  /* Service cards: tighter padding */
+  .service { padding: 24px; }
+  .service__title { font-size: 1.15rem; }
+
+  /* Project / work titles smaller */
+  .project__title { font-size: 1.1rem; }
+
+  /* Section heads */
+  .h2 { font-size: clamp(1.8rem, 8vw, 2.6rem); line-height: 1.1; }
+  .section-label { font-size: 0.66rem; letter-spacing: 0.18em; }
+}
+
+/* Tiny phones (≤400px) — last safety net */
+@media (max-width: 400px) {
+  :root { --gutter: 20px; }
+  .hero__title { font-size: clamp(1.95rem, 10vw, 2.6rem); }
+  .hero__lede { font-size: 0.94rem; }
+  .hero__inner { padding-top: 100px; gap: 14px; }
+  .hero__eyebrow { font-size: 0.58rem; padding: 6px 12px; gap: 8px; }
+  .hero__meta-row { font-size: 0.58rem; gap: 6px 12px; letter-spacing: 0.14em; }
+  .hero__cta .btn { padding: 13px 18px; font-size: 0.74rem; letter-spacing: 0.1em; }
+  .nav__inner { gap: 12px; }
+  .marquee { font-size: 0.7rem; padding: 12px 0; }
+  .nav__mobile a { font-size: 1.2rem; padding: 12px 0; }
+}
+
+/* Industry-standard guards — apply at all viewports */
+img, video, iframe { max-width: 100%; height: auto; }
+input, textarea, select, button { font-family: inherit; }
+@supports (padding: env(safe-area-inset-bottom)) {
+  .fab-whatsapp { bottom: max(20px, env(safe-area-inset-bottom)); }
+  .back-to-top { bottom: max(28px, env(safe-area-inset-bottom)); }
 }
 
 /* ============================================================
@@ -2110,7 +2208,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 [data-theme="light"] .nav.is-scrolled { background: rgba(244,239,230,0.96); }
 [data-theme="light"] .nav__links a { color: #2a2620; }
 [data-theme="light"] .nav__toggle span { background: #2a2620; }
-[data-theme="light"] .nav__mobile { background: var(--stone-soft); }
+[data-theme="light"] .nav__mobile { background: rgba(244,239,230,0.98); }
 [data-theme="light"] .nav__mobile a { border-bottom-color: rgba(0,0,0,0.08); color: #2a2620; }
 [data-theme="light"] .btn--ghost {
   color: #2a2620;
