@@ -25,7 +25,8 @@
 
   <title>Space &amp; Time Design Concepts — We imagine and create each space, per time.</title>
 
-  <link rel="icon" type="image/png" href="brand_assets/logo_horizontal_dark.png" />
+  <link rel="icon" type="image/jpeg" href="brand_assets/monogram.jpg" />
+  <link rel="apple-touch-icon" href="brand_assets/monogram.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -131,7 +132,13 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero__bg" aria-hidden="true">
-      <div class="hero__img" data-parallax="0.06"></div>
+      <video
+        class="hero__video"
+        autoplay muted loop playsinline preload="metadata"
+        poster="assets/projects/villa-stone.jpg"
+        data-parallax="0.06">
+        <source src="assets/video/hero-loop.mp4" type="video/mp4" />
+      </video>
       <div class="hero__overlay"></div>
     </div>
 
@@ -217,7 +224,7 @@
   <section class="about section" id="about">
     <div class="container about__grid">
       <div class="about__media reveal-img">
-        <div class="about__img" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80&auto=format&fit=crop')"></div>
+        <div class="about__img" style="background-image:url('assets/interiors/sitting-grey.jpg')"></div>
         <div class="about__badge">
           <span class="serif italic">Studio</span>
           <strong>16 Akanbi Cres, Yaba</strong>
@@ -494,48 +501,84 @@
       <div class="work-grid">
         <article class="project project--lg reveal-img">
           <div class="project__media">
-            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&q=80&auto=format&fit=crop')"></div>
+            <div class="project__img" style="background-image:url('assets/projects/hospitality-bedroom-01.jpg')"></div>
           </div>
           <div class="project__meta">
-            <span class="project__cat">Residential · In build</span>
-            <h3 class="project__title">Johnson's Villa</h3>
-            <span class="project__loc">Omole Phase 1, Lagos</span>
+            <span class="project__cat">Hospitality · Delivered 2025</span>
+            <h3 class="project__title">Hospitality Suites</h3>
+            <span class="project__loc">Lagos, Nigeria</span>
           </div>
           <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
         </article>
 
         <article class="project reveal-img">
           <div class="project__media">
-            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80&auto=format&fit=crop')"></div>
+            <div class="project__img" style="background-image:url('assets/projects/villa-stone.jpg')"></div>
           </div>
           <div class="project__meta">
-            <span class="project__cat">Commercial · Delivered</span>
-            <h3 class="project__title">Eco Bank Remodelling</h3>
-            <span class="project__loc">Benz Centre, Lekki, Lagos</span>
+            <span class="project__cat">Residential · 5BR · In Design</span>
+            <h3 class="project__title">Stone Villa</h3>
+            <span class="project__loc">Lagos, Nigeria</span>
           </div>
           <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
         </article>
 
         <article class="project reveal-img">
           <div class="project__media">
-            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80&auto=format&fit=crop')"></div>
+            <div class="project__img" style="background-image:url('assets/projects/villa-lekki.jpg')"></div>
           </div>
           <div class="project__meta">
-            <span class="project__cat">Office · Proposed</span>
-            <h3 class="project__title">PETAN Office Complex</h3>
-            <span class="project__loc">Port Harcourt, Nigeria</span>
+            <span class="project__cat">Residential · Concept</span>
+            <h3 class="project__title">Lekki Premium Villa</h3>
+            <span class="project__loc">Lekki, Lagos</span>
+          </div>
+          <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
+        </article>
+
+        <article class="project reveal-img">
+          <div class="project__media">
+            <div class="project__img" style="background-image:url('assets/projects/villa-garden.jpg')"></div>
+          </div>
+          <div class="project__meta">
+            <span class="project__cat">Residential · Single-Family · Concept</span>
+            <h3 class="project__title">Garden Family Villa</h3>
+            <span class="project__loc">Lagos, Nigeria</span>
           </div>
           <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
         </article>
 
         <article class="project project--lg reveal-img">
           <div class="project__media">
-            <div class="project__img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80&auto=format&fit=crop')"></div>
+            <div class="project__img" style="background-image:url('assets/projects/apartments-midrise.jpg')"></div>
           </div>
           <div class="project__meta">
-            <span class="project__cat">Residential · International</span>
-            <h3 class="project__title">Private Residence, Liberia</h3>
-            <span class="project__loc">Monrovia, Liberia</span>
+            <span class="project__cat">Multi-Unit · 16 Apartments · Proposed</span>
+            <h3 class="project__title">Mid-Rise Apartments</h3>
+            <span class="project__loc">Lagos, Nigeria</span>
+          </div>
+          <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
+        </article>
+
+        <article class="project reveal-img">
+          <div class="project__media">
+            <div class="project__img" style="background-image:url('assets/projects/duplex-twin.jpg')"></div>
+          </div>
+          <div class="project__meta">
+            <span class="project__cat">Residential · Twin Units · Concept</span>
+            <h3 class="project__title">Twin Duplex</h3>
+            <span class="project__loc">Lagos, Nigeria</span>
+          </div>
+          <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
+        </article>
+
+        <article class="project reveal-img">
+          <div class="project__media">
+            <div class="project__img" style="background-image:url('assets/projects/office-modern.jpg')"></div>
+          </div>
+          <div class="project__meta">
+            <span class="project__cat">Commercial · Office · Proposed</span>
+            <h3 class="project__title">Modern Office Complex</h3>
+            <span class="project__loc">Port Harcourt, Nigeria</span>
           </div>
           <div class="project__hover"><span>View Project <span class="btn-arr">→</span></span></div>
         </article>
@@ -763,7 +806,7 @@
 
   <!-- CTA BANNER -->
   <section class="cta-banner">
-    <div class="cta-banner__bg" data-parallax="0.2" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80&auto=format&fit=crop')"></div>
+    <div class="cta-banner__bg" data-parallax="0.2" style="background-image:url('assets/interiors/living-pendants.jpg')"></div>
     <div class="cta-banner__overlay"></div>
     <div class="container cta-banner__inner">
       <p class="eyebrow reveal" style="color: rgba(255,255,255,0.7);">Have a vision?</p>
@@ -838,9 +881,38 @@
             <option>Consultancy / Other</option>
           </select>
         </div>
+        <div class="field--row">
+          <div class="field">
+            <label for="budget">Budget Range</label>
+            <select id="budget" name="budget" required>
+              <option value="">Select a range…</option>
+              <option>Under ₦25M</option>
+              <option>₦25M – ₦75M</option>
+              <option>₦75M – ₦200M</option>
+              <option>₦200M – ₦500M</option>
+              <option>Over ₦500M</option>
+              <option>Not yet defined</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="timeline">Project Timeline</label>
+            <select id="timeline" name="timeline" required>
+              <option value="">When do you want to start?</option>
+              <option>Ready to start now</option>
+              <option>Within 3 months</option>
+              <option>3 – 6 months</option>
+              <option>6 – 12 months</option>
+              <option>Just planning ahead</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="location">Project Location <small style="color:var(--muted); text-transform:none; letter-spacing:0;">(optional)</small></label>
+          <input type="text" id="location" name="location" placeholder="e.g. Lekki, Lagos · Monrovia, Liberia" autocomplete="address-level2" />
+        </div>
         <div class="field">
           <label for="message">Project Brief</label>
-          <textarea id="message" name="message" rows="4" required placeholder="Site, scope, budget range, target completion…"></textarea>
+          <textarea id="message" name="message" rows="4" required placeholder="Site context, scope, ambition, design references, anything else we should know…"></textarea>
         </div>
         <button type="submit" class="btn btn--primary btn--block"><span>Send Brief</span> <span class="btn-arr">→</span></button>
         <p class="form-status" id="formStatus" aria-live="polite"></p>

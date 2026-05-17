@@ -202,6 +202,8 @@
       const name = (data.get('name') || '').toString().trim();
       const email = (data.get('email') || '').toString().trim();
       const message = (data.get('message') || '').toString().trim();
+      const budget = (data.get('budget') || '').toString().trim();
+      const timeline = (data.get('timeline') || '').toString().trim();
 
       if (!name || !email || !message) {
         status.textContent = 'Please complete the required fields.';
@@ -210,6 +212,11 @@
       }
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
         status.textContent = 'Please enter a valid email address.';
+        status.style.color = 'var(--terracotta)';
+        return;
+      }
+      if (!budget || !timeline) {
+        status.textContent = 'Please select a budget range and timeline.';
         status.style.color = 'var(--terracotta)';
         return;
       }

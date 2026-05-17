@@ -382,23 +382,22 @@ ul { list-style: none; padding: 0; margin: 0; }
   inset: -10% 0 0 0;
   z-index: 0;
 }
-.hero__img {
+.hero__video {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(180deg, rgba(14,14,14,0.55) 0%, rgba(14,14,14,0.45) 30%, rgba(14,14,14,0.6) 65%, rgba(14,14,14,0.92) 100%),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=85&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transform: scale(1.08);
   transition: transform 6s ease-out;
   will-change: transform;
 }
-.hero.is-loaded .hero__img { transform: scale(1); }
+.hero.is-loaded .hero__video { transform: scale(1); }
 .hero__overlay {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 50% at 50% 55%, rgba(14,14,14,0.55) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(14,14,14,0.55) 0%, rgba(14,14,14,0.35) 30%, rgba(14,14,14,0.5) 65%, rgba(14,14,14,0.92) 100%),
+    radial-gradient(ellipse 70% 50% at 50% 55%, rgba(14,14,14,0.45) 0%, transparent 70%),
     radial-gradient(ellipse at 85% 90%, rgba(181,76,18,0.18), transparent 50%);
 }
 .hero__grid {
@@ -1621,6 +1620,14 @@ ul { list-style: none; padding: 0; margin: 0; }
   gap: 18px;
 }
 .field { display: flex; flex-direction: column; gap: 6px; }
+.field--row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 560px) {
+  .field--row { grid-template-columns: 1fr; }
+}
 .field label {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
@@ -2745,6 +2752,21 @@ input, textarea, select, button { font-family: inherit; }
 /* Service card lift */
 .service { transition: background var(--t-med), transform var(--t-med); }
 .service:hover { transform: translateY(-4px); }
+
+/* 3D Visualization tile reveals an interior render on hover */
+.service--accent { position: relative; isolation: isolate; }
+.service--accent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(14,14,14,0.82), rgba(14,14,14,0.88)),
+    url('assets/interiors/dining-luxe.jpg') center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 600ms ease;
+  z-index: -1;
+}
+.service--accent:hover::before { opacity: 1; }
 
 /* Anchor links land below the fixed nav (78px nav + small breathing room).
    scroll-padding-top works with the existing html { scroll-behavior: smooth } */
