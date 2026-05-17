@@ -40,20 +40,10 @@
     });
   } catch (e) {}
 
-  // ---------- Loader ----------
-  const loader = document.getElementById('loader');
+  // ---------- Hero loaded state (triggers scale-zoom-in) ----------
   const hero = document.querySelector('.hero');
-  const hideLoader = () => {
-    if (!loader) return;
-    loader.classList.add('is-hidden');
-    if (hero) hero.classList.add('is-loaded');
-    setTimeout(() => loader.remove(), 700);
-  };
-  if (document.readyState === 'complete') {
-    setTimeout(hideLoader, 600);
-  } else {
-    window.addEventListener('load', () => setTimeout(hideLoader, 600));
-    setTimeout(hideLoader, 2400); // safety fallback
+  if (hero) {
+    requestAnimationFrame(() => hero.classList.add('is-loaded'));
   }
 
   // ---------- Sticky nav style on scroll ----------

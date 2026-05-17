@@ -184,74 +184,6 @@ ul { list-style: none; padding: 0; margin: 0; }
 .btn--lg { padding: 18px 36px; font-size: 0.95rem; }
 
 /* ============================================================
-   LOADER
-   ============================================================ */
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: var(--charcoal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 600ms ease, visibility 600ms ease;
-}
-.loader.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-.loader__inner {
-  position: relative;
-  width: 280px;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-}
-.loader__bracket {
-  position: absolute;
-  width: 56px; height: 56px;
-  border: 3px solid var(--orange);
-  opacity: 0;
-  animation: bracketFade 1200ms var(--ease-out) forwards;
-}
-.loader__bracket--tl {
-  top: 0; left: 0;
-  border-right: none; border-bottom: none;
-  animation-delay: 100ms;
-}
-.loader__bracket--br {
-  bottom: 0; right: 0;
-  border-left: none; border-top: none;
-  border-color: var(--stone);
-  animation-delay: 300ms;
-}
-.loader__text {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 0.12em;
-  color: var(--white);
-  opacity: 0;
-  animation: fadeIn 800ms ease 500ms forwards;
-}
-.loader__sub {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--orange);
-  opacity: 0;
-  animation: fadeIn 800ms ease 700ms forwards;
-}
-@keyframes bracketFade {
-  0% { opacity: 0; transform: scale(0.7); }
-  100% { opacity: 1; transform: scale(1); }
-}
-@keyframes fadeIn { to { opacity: 1; } }
-
-/* ============================================================
    NAV
    ============================================================ */
 .nav {
@@ -396,8 +328,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .hero__overlay {
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(14,14,14,0.55) 0%, rgba(14,14,14,0.35) 30%, rgba(14,14,14,0.5) 65%, rgba(14,14,14,0.92) 100%),
-    radial-gradient(ellipse 70% 50% at 50% 55%, rgba(14,14,14,0.45) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(14,14,14,0.25) 0%, rgba(14,14,14,0.1) 35%, rgba(14,14,14,0.2) 65%, rgba(14,14,14,0.85) 100%),
     radial-gradient(ellipse at 85% 90%, rgba(181,76,18,0.18), transparent 50%);
 }
 .hero__grid {
@@ -2238,12 +2169,6 @@ input, textarea, select, button { font-family: inherit; }
 }
 
 /* Logo theme swap (nav only — footer is dark in both themes) */
-.nav__logo .logo--light { display: none; }
-[data-theme="light"] .nav__logo .logo--dark { display: none; }
-[data-theme="light"] .nav__logo .logo--light { display: block; }
-
-/* Footer always uses the dark-bg logo (white-text variant) */
-.footer__brand .logo--light { display: none; }
 
 /* Sections that switch to light surfaces */
 [data-theme="light"] .about,
