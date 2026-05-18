@@ -357,7 +357,6 @@ ul { list-style: none; padding: 0; margin: 0; }
 .hero__overlay {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 50%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 60%, transparent 80%),
     linear-gradient(180deg, rgba(14,14,14,0.25) 0%, rgba(14,14,14,0.1) 35%, rgba(14,14,14,0.2) 65%, rgba(14,14,14,0.85) 100%),
     radial-gradient(ellipse at 85% 90%, rgba(181,76,18,0.18), transparent 50%);
 }
@@ -1651,7 +1650,13 @@ ul { list-style: none; padding: 0; margin: 0; }
   gap: var(--space-lg);
   margin-bottom: var(--space-lg);
 }
-.footer__brand img { height: 48px; margin-bottom: 18px; }
+.footer__brand img {
+  height: 60px;
+  margin-bottom: 18px;
+  padding: 8px;
+  background: rgba(232,224,212,0.08);
+  border-radius: 10px;
+}
 .footer__brand p {
   color: rgba(232,224,212,0.78);
   font-size: 0.92rem;
@@ -2182,6 +2187,8 @@ input, textarea, select, button { font-family: inherit; }
 [data-theme="light"] .nav__toggle span { background: #2a2620; }
 [data-theme="light"] .nav__mobile { background: rgba(244,239,230,0.98); }
 [data-theme="light"] .nav__mobile a { border-bottom-color: rgba(0,0,0,0.08); color: #2a2620; }
+[data-theme="light"] .nav__brand-name { color: #2a2620; }
+[data-theme="light"] .nav__brand-sub { color: rgba(42,38,32,0.7); }
 [data-theme="light"] .btn--ghost {
   color: #2a2620;
   border-color: rgba(0,0,0,0.2);
