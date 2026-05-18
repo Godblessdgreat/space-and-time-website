@@ -314,17 +314,17 @@ ul { list-style: none; padding: 0; margin: 0; }
   inset: -10% 0 0 0;
   z-index: 0;
 }
-.hero__video {
+.hero__img {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background-image: url('assets/projects/villa-stone.jpg');
+  background-size: cover;
+  background-position: center;
   transform: scale(1.08);
   transition: transform 6s ease-out;
   will-change: transform;
 }
-.hero.is-loaded .hero__video { transform: scale(1); }
+.hero.is-loaded .hero__img { transform: scale(1); }
 .hero__overlay {
   position: absolute; inset: 0;
   background:
