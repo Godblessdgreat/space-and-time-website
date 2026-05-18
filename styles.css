@@ -207,12 +207,41 @@ ul { list-style: none; padding: 0; margin: 0; }
   justify-content: space-between;
   gap: 24px;
 }
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
 .nav__logo img {
   height: 42px;
   width: auto;
   transition: height var(--t-med);
 }
 .nav.is-scrolled .nav__logo img { height: 36px; }
+.nav__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+.nav__brand-name {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+.nav__brand-sub {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(232,224,212,0.7);
+  margin-top: 2px;
+}
+@media (max-width: 560px) {
+  .nav__brand-text { display: none; }
+}
 .nav__links {
   display: flex;
   gap: 32px;
