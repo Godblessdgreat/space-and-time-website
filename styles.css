@@ -215,29 +215,21 @@ ul { list-style: none; padding: 0; margin: 0; }
 .nav__logo img {
   height: 42px;
   width: auto;
-  transition: height var(--t-med);
+  transition: height var(--t-med), filter var(--t-med);
+  filter: brightness(0) invert(1);
 }
 .nav.is-scrolled .nav__logo img { height: 36px; }
 .nav__brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-  text-align: left;
-}
-.nav__brand-name {
+  display: block;
   font-family: var(--font-sans);
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--white);
-}
-.nav__brand-sub {
-  font-family: var(--font-sans);
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
   text-transform: uppercase;
-  color: rgba(232,224,212,0.7);
-  margin-top: 2px;
+  text-align: center;
+  color: var(--white);
+  max-width: 14ch;
 }
 @media (max-width: 560px) {
   .nav__brand-text { display: none; }
@@ -2186,8 +2178,8 @@ input, textarea, select, button { font-family: inherit; }
 [data-theme="light"] .nav__toggle span { background: #2a2620; }
 [data-theme="light"] .nav__mobile { background: rgba(244,239,230,0.98); }
 [data-theme="light"] .nav__mobile a { border-bottom-color: rgba(0,0,0,0.08); color: #2a2620; }
-[data-theme="light"] .nav__brand-name { color: #2a2620; }
-[data-theme="light"] .nav__brand-sub { color: rgba(42,38,32,0.7); }
+[data-theme="light"] .nav__brand-text { color: #2a2620; }
+[data-theme="light"] .nav__logo img { filter: brightness(0); }
 [data-theme="light"] .btn--ghost {
   color: #2a2620;
   border-color: rgba(0,0,0,0.2);
