@@ -1930,7 +1930,8 @@ ul { list-style: none; padding: 0; margin: 0; }
   .hero__bottom-row { grid-template-columns: 1fr; gap: 14px; }
   .hero__bottom-item--quote { grid-column: span 1; text-align: left; border-left: none; padding-left: 0; }
   .hero__cta .btn { padding: 14px 20px; font-size: 0.78rem; }
-  .nav__brand img, .nav__logo img { height: 28px; }
+  /* .nav__logo img height is set in the dedicated nav block (~line 262);
+     don't override here. .nav__brand was removed in an earlier refactor. */
   .nav { padding: 10px 0; }
   .nav.is-scrolled { padding: 8px 0; }
 
@@ -1969,9 +1970,9 @@ ul { list-style: none; padding: 0; margin: 0; }
 /* Tiny phones (≤400px) — last safety net */
 @media (max-width: 400px) {
   :root { --gutter: 20px; }
-  .hero__title { font-size: clamp(1.95rem, 10vw, 2.6rem); }
+  .hero__title { font-size: clamp(1.5rem, 9vw, 2.2rem); }
   .hero__lede { font-size: 0.94rem; }
-  .hero__inner { padding-top: 100px; gap: 14px; }
+  .hero__inner { padding: 88px var(--gutter) 32px; gap: 14px; }
   .hero__eyebrow { font-size: 0.58rem; padding: 6px 12px; gap: 8px; }
   .hero__meta-row { font-size: 0.58rem; gap: 6px 12px; letter-spacing: 0.14em; }
   .hero__cta .btn { padding: 13px 18px; font-size: 0.74rem; letter-spacing: 0.1em; }
