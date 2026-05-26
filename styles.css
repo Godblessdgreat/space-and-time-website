@@ -210,7 +210,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
-  padding: 18px 0;
+  padding: 12px 0;
   background: rgba(14,14,14,0.5);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -218,7 +218,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   transition: padding var(--t-med), background var(--t-med);
 }
 .nav.is-scrolled {
-  padding: 12px 0;
+  padding: 8px 0;
   background: rgba(14,14,14,0.92);
 }
 .nav__inner {
@@ -230,33 +230,41 @@ ul { list-style: none; padding: 0; margin: 0; }
 .nav__logo {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
 }
 .nav__logo img {
-  height: 34px;
+  height: 50px;
   width: auto;
-  transition: height var(--t-med);
+  display: block;
   background: #fff;
-  padding: 3px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 7px;
   box-sizing: content-box;
+  transition: height var(--t-med), padding var(--t-med);
 }
-.nav.is-scrolled .nav__logo img { height: 28px; }
+.nav.is-scrolled .nav__logo img { height: 42px; padding: 4px; }
 .nav__brand-text {
-  display: inline-block;
+  display: block;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 500;
   letter-spacing: 0.08em;
-  line-height: 1;
+  line-height: 1.25;
   text-transform: uppercase;
   color: var(--white);
-  white-space: nowrap;
+  max-width: 14ch;
+  text-align: left;
 }
-.nav__brand-text-extra { display: inline; }
+@media (max-width: 980px) {
+  .nav__logo img { height: 44px; }
+  .nav.is-scrolled .nav__logo img { height: 38px; }
+  .nav__brand-text { font-size: 0.72rem; max-width: 13ch; }
+}
 @media (max-width: 560px) {
-  .nav__brand-text { font-size: 0.7rem; letter-spacing: 0.06em; }
-  .nav__brand-text-extra { display: none; }
+  .nav__logo { gap: 8px; }
+  .nav__logo img { height: 38px; padding: 4px; border-radius: 6px; }
+  .nav.is-scrolled .nav__logo img { height: 34px; }
+  .nav__brand-text { font-size: 0.62rem; letter-spacing: 0.07em; max-width: 11ch; }
 }
 @media (max-width: 400px) {
   .nav__brand-text { display: none; }
@@ -1893,7 +1901,8 @@ ul { list-style: none; padding: 0; margin: 0; }
   .hero__bottom-item--quote { grid-column: span 1; text-align: left; border-left: none; padding-left: 0; }
   .hero__cta .btn { padding: 14px 20px; font-size: 0.78rem; }
   .nav__brand img, .nav__logo img { height: 28px; }
-  .nav { padding: 14px 0; }
+  .nav { padding: 10px 0; }
+  .nav.is-scrolled { padding: 8px 0; }
 
   /* Roles last-child span: reset for single-col layout */
   .roles-grid .role:last-child { grid-column: span 1; }
