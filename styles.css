@@ -264,7 +264,10 @@ ul { list-style: none; padding: 0; margin: 0; }
   .nav__brand-text { font-size: 0.6rem; letter-spacing: 0.06em; }
 }
 @media (max-width: 400px) {
-  .nav__brand-text { display: none; }
+  .nav__logo { gap: 4px; }
+  .nav__logo img { height: 30px; }
+  .nav.is-scrolled .nav__logo img { height: 28px; }
+  .nav__brand-text { font-size: 0.52rem; letter-spacing: 0.04em; }
 }
 .nav__links {
   display: flex;
